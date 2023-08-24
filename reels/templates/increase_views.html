@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Increase Reels Views</title>
+</head>
+<body>
+    <h1>Increase Reels Views</h1>
+   <form method="post" action="{% url 'increase_reels_views' %}">
+    {% csrf_token %}
+    <label for="reels_link">Enter Instagram Reels Link:</label>
+    <input type="text" id="reels_link" name="reels_link" required>
+    <button type="submit">Increase Views</button>
+</form>
+
+    <div>
+        {% if message %}
+            <p>{{ message }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
+
